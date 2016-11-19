@@ -1,0 +1,12 @@
+{
+  "manifest_version": 2,
+
+  "name": "IVLE Module Bin",
+  "description": "Don't want to see a module? Just bin it away!",
+  "version": "0.1",
+
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_title": "IVLE Module Bin"
+  }
+}
