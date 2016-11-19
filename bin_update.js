@@ -7,6 +7,7 @@ function rememberHidden(element) {
   var modules = localStorage.getItem("hidden");
   if (modules == null) {
     modules = "";
+    $( ".col-md-5 > :contains(Refresh Modules)" ).parent().children().prepend("<a onclick='localStorage.clear();window.location.reload();'>Show all</a> &nbsp; ");
   } else {
     modules += " ";
   }

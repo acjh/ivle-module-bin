@@ -8,6 +8,7 @@ function injectJS() {
 function binPreviouslyHidden() {
   var modules = localStorage.getItem("hidden");
   if (modules != null) {
+    $( ".col-md-5 > :contains(Refresh Modules)" ).parent().children().prepend("<a onclick='localStorage.clear();window.location.reload();'>Show all</a> &nbsp; ");
     modules = modules.split(" ");
     for (var module in modules) {
       $( ".col-md-7 > :contains(" + modules[module] + ")" ).parent().parent().parent().parent()[0].remove()
