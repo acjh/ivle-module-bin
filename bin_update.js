@@ -1,6 +1,6 @@
 function bin(element) {
   rememberHidden(element);
-  $(element).parent().parent().parent().parent().parent().remove();
+  $(element).parent().parent().parent().parent().parent().toggle(1000);
 }
 
 function rememberHidden(element) {
