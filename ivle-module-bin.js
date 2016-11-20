@@ -1,9 +1,10 @@
 function bin(element) {
-  rememberHidden(element);
-  $(element).parent().parent().parent().parent().parent().toggle(1000);
+  var module = $(element).closest( ".row" ).find( "a" ).text();
+  $( "a:contains(" + module + ")" ).closest( ".panel" ).toggle(delay);
+  rememberHidden(module);
 }
 
-function rememberHidden(element) {
+function rememberHidden(module) {
   var modules = localStorage.getItem("hidden");
   if (modules == null) {
     modules = "";
@@ -11,7 +12,7 @@ function rememberHidden(element) {
   } else {
     modules += " ";
   }
-  modules += $(element).parent().parent().prev().children().text().trim();;
+  modules += module;
   localStorage.setItem("hidden", modules);
 }
 
@@ -19,10 +20,10 @@ function showAll() {
   var modules = localStorage.getItem("hidden");
   modules = modules.split(" ");
   for (var module in modules) {
-    $( ".col-md-7 > :contains(" + modules[module] + ")" ).parent().parent().parent().parent().toggle(1000);
+    $( "a:contains(" + modules[module] + ")" ).closest( ".panel" ).toggle(1000);
   }
   localStorage.clear();
-  $( "a:contains(Show all)" ).remove().parent().children().prepend("<a onclick='showAll();'>Show all</a> &nbsp; ");
+  $( "span:contains(Show all)" ).remove();
 }
 
 function addBtnShowAll() {

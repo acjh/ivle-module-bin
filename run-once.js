@@ -10,14 +10,14 @@ function binPreviouslyHidden() {
   if (modules != null) {
     modules = modules.split(" ");
     for (var module in modules) {
-      $( ".col-md-7 > :contains(" + modules[module] + ")" ).parent().parent().parent().parent().toggle();
+      $( "a:contains(" + modules[module] + ")" ).closest( ".panel" ).toggle(1000);
     }
     addBtnShowAll();
   }
 }
 
 function insertBinIcons() {
-  $( ".panel-body > .panel > .panel-heading > .row > .col-md-5" ).children().prepend("<a onclick='bin(this);'><span class='glyphicon glyphicon-trash'></span></a> &nbsp; ");
+  $( ".panel-body > .panel > .panel-heading > .row > .col-md-5 > .pull-right" ).prepend("<a onclick='bin(this);'><span class='glyphicon glyphicon-trash'></span></a> &nbsp; ");
 }
 
 injectJS();
