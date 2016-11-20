@@ -1,25 +1,19 @@
-function injectJS() {
+var run_once = function injectJS() {
   var script = document.createElement('script');
   script.type = "text/javascript";
   script.src = chrome.extension.getURL("ivle-module-bin.js");
   document.getElementsByTagName("head")[0].appendChild(script);
-}
+}();
 
-function binPreviouslyHidden() {
-  var modules = localStorage.getItem("hidden");
+var run_once = function binHiddenModules() {
+  var modules = getHiddenModules();
   if (modules != null) {
-    modules = modules.split(" ");
-    for (var module in modules) {
-      $( "a:contains(" + modules[module] + ")" ).closest( ".panel" ).toggle(1000);
-    }
     addBtnShowAll();
+    togglePanels(modules, delay=0);
   }
-}
+}();
 
-function insertBinIcons() {
-  $( ".panel-body > .panel > .panel-heading > .row > .col-md-5 > .pull-right" ).prepend("<a onclick='bin(this);'><span class='glyphicon glyphicon-trash'></span></a> &nbsp; ");
-}
-
-injectJS();
-binPreviouslyHidden();
-insertBinIcons();
+var run_once = function addBtnBin() {
+  var selector = ".panel-body > .panel > .panel-heading > .row > .col-md-5 > .pull-right";
+  $( selector ).prepend("<a onclick='bin(this);'><span class='glyphicon glyphicon-trash'></span></a> &nbsp; ");
+}();

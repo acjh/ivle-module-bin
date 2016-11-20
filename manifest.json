@@ -3,7 +3,7 @@
 
   "name": "IVLE Module Bin",
   "description": "Don't want to see a module? Just bin it away!",
-  "version": "0.1.1",
+  "version": "0.1.2",
 
   "browser_action": {
     "default_icon": "icon.png",
@@ -13,7 +13,7 @@
   "content_scripts": [
     {
       "matches": ["https://ivle.nus.edu.sg/v1/workspace.aspx"],
-      "js": ["jquery-3.1.1.min.js","run-once.js"],
+      "js": ["jquery-3.1.1.min.js","ivle-module-bin.js","run-once.js"],
       "run_at": "document_end"
     }
   ],
