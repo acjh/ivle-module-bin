@@ -7,7 +7,7 @@ function rememberHidden(element) {
   var modules = localStorage.getItem("hidden");
   if (modules == null) {
     modules = "";
-    $( ".col-md-5 > :contains(Refresh Modules)" ).parent().children().prepend("<a onclick='showAll();'>Show all</a> &nbsp; ");
+    addBtnShowAll();
   } else {
     modules += " ";
   }
@@ -23,4 +23,12 @@ function showAll() {
   }
   localStorage.clear();
   $( "a:contains(Show all)" ).remove().parent().children().prepend("<a onclick='showAll();'>Show all</a> &nbsp; ");
+}
+
+function addBtnShowAll() {
+  var col = $( ".col-md-5:contains(Refresh Modules)" );
+  var autoWidth = { "width": "auto" };
+  col.css(autoWidth).addClass( "pull-right" );
+  col.prev().css(autoWidth);
+  col.children().prepend("<span><a onclick='showAll();'>Show all</a> &nbsp; </span>");
 }
