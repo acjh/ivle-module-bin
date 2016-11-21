@@ -15,5 +15,7 @@ var run_once = function binHiddenModules() {
 
 var run_once = function addBtnBin() {
   var selector = ".panel-body > .panel > .panel-heading > .row > .col-md-5 > .pull-right";
-  $( selector ).prepend("<a onclick='bin(this);'><span class='glyphicon glyphicon-trash'></span></a> &nbsp; ");
+  var onclick = " " + "onclick='bin(this);'";
+  var icon = "<span class='glyphicon glyphicon-trash'></span>";
+  $( selector ).prepend("<a" + onclick + ">" + icon + "</a> &nbsp; ");
 }();
