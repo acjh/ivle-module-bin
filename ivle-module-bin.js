@@ -1,7 +1,7 @@
 /* 'onclick' functions */
 
-function bin(element) {
-  var module = $(element).closest( ".row" ).find( "a" ).text();
+function bin() {
+  var module = $(this).closest( ".row" ).find( "a" ).text();
   togglePanel(module, delay=1000);
   rememberHiddenModule(module);
 }
@@ -20,7 +20,8 @@ function addBtnShowAll() {
   var autoWidth = { "width": "auto" };
   col.css(autoWidth).addClass( "pull-right" );
   col.prev().css(autoWidth);
-  col.children().prepend("<span><a onclick='showAll();'>Show all</a> &nbsp; </span>");
+  col.children().prepend("<span><a class='module-show-all'>Show all</a> &nbsp; </span>");
+  $('.module-show-all').click(showAll);
   return "";
 }
 

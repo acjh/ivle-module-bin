@@ -24,10 +24,6 @@
     }
   ],
 
-  "web_accessible_resources": [
-    "ivle-module-bin.js"
-  ],
-
   "permissions": [
     "https://ivle.nus.edu.sg/v1/workspace.aspx"
   ]
