@@ -4,6 +4,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [0.2.0] - 2017-09-11
+### Added
+- Hide notification count when 0
+
+### Changed
+- Replace html `onclick` with jQuery `click`, remove JS script injection
+
 ## [0.1.3] - 2016-11-21
 ### Added
 - Popover for bin button
@@ -27,6 +34,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - Auto remember hidden modules
 - Auto bin previously hidden modules
 
+[0.2.0]: https://github.com/acjh/ivle-module-bin/compare/v0.1.3...v0.2.0
 [0.1.3]: https://github.com/acjh/ivle-module-bin/compare/v0.1.2...v0.1.3
 [0.1.2]: https://github.com/acjh/ivle-module-bin/compare/v0.1.1...v0.1.2
 [0.1.1]: https://github.com/acjh/ivle-module-bin/compare/v0.1...v0.1.1
