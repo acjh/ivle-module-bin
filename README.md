@@ -1,14 +1,28 @@
-# IVLE Module Bin
+# IVLE Tweaks
 This is a Google Chrome Extension for NUS IVLE.
 
-Finished an exam paper? What's an alternative to burning your books to celebrate? How about binning the module on IVLE? Check it out!
+Some maybe useful, some just because. After all, I spend much time on IVLE. See [features](#features).
 
 
 ## Table of Contents
+1. [Features](#features)
 1. [Requirements](#requirements)
 1. [Installation](#installation)
 1. [Contributing](#contributing)
 
+
+## Features
+- **Notification Observer**
+  - Annoyed by the bright red 0? Hides the notification count when it's 0!
+
+   ![bright-red-0](bright-red-0.png)
+   ![no-red-0](no-red-0.png)
+
+
+- **Module Bin**
+  - Finished an exam paper? What's an alternative to burning your books to celebrate? How about binning the module on IVLE?
+
+   ![bin-show-all](bin-show-all.jpg)
 
 ## Requirements
 - Google Chrome
