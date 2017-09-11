@@ -30,19 +30,9 @@ Some maybe useful, some just because. After all, I spend much time on IVLE. See 
 
 
 ## Installation
-- Special Programme in Science users
-
-  1. Two-click installation from
-[Chrome Web Store](https://chrome.google.com/webstore/detail/ivle-module-bin/jdfihkjjaogjbfdbpgjmmmjaeebcimmk)!
-
-
-- Other users\*
-
-  1. Download the latest `ivle-module-bin.crx` from [Releases](https://github.com/acjh/ivle-module-bin/releases).
-  1. Drag-and-drop to `chrome://extensions`.
-
-  \*Chrome automatically disables unsupported extensions.
+- Two-click installation from
+[Chrome Web Store](https://chrome.google.com/webstore/detail/ivle-tweaks/jdfihkjjaogjbfdbpgjmmmjaeebcimmk)!
 
 
 ## Contributing
-Contributions are welcome! The easiest way to contribute is to post bugs reports and feature requests in the [issue tracker](https://github.com/acjh/ivle-module-bin/issues).
+Contributions are welcome! The easiest way to contribute is to post bugs reports and feature requests in the [issue tracker](https://github.com/acjh/ivle-tweaks/issues).
